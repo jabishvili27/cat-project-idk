@@ -1,0 +1,35 @@
+<div class="header">
+  <div class="headercomponent">
+    <div class="headername">
+      {{ "CatMarket" | translate }}
+      <div>{{ "home" | translate }}</div>
+    </div>
+    <div class="header1">
+      <div class="signbutton">
+        <ng-container *ngIf="!isLoggedIn">
+          <button
+            type="button"
+            class="btn btn-outline-primary"
+            (click)="signin()"
+          >
+            {{ "sign in" | translate }}
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-primary"
+            (click)="signup()"
+          >
+            {{ "sign up" | translate }}
+          </button>
+        </ng-container>
+        <button *ngIf="isLoggedIn" (click)="signOut()" class="btn btn-danger">
+          {{ "SIGN OUT" | translate }}
+        </button>
+      </div>
+      <div>
+        <button (click)="toen()">en</button>
+        <button (click)="toka()">ka</button>
+      </div>
+    </div>
+  </div>
+</div>
